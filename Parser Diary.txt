@@ -1,0 +1,68 @@
+Goal: Ge' that mf to read properly.
+
+TODO
+
++ Read file
+    + Line by line, baby
+
+* Organise Content
+    * Make struct Person that includes name & array of friends
+	* Friend includes name and weight.
+    + Make array that holds all Person(s)
+	* This may need to be dynamic
+	+ (No it doesn't)
+    + Input line: first two strings before comma are names, the last is their shared weight.
+    * Check if names already exist, make a new Person if they don't, and input data.
+    * If Person exists, then update friend-list with the other Name(+ weight).
+
++ Organise content, but better
+    + One struct contains everything of value on a line, sorted
+	+ See "Input line" above
+	+ Struct contains Source, Target, and their shared weight
+
+- While(true) loop for inputs
+    - run the correct action with given input
+	- If they input L, Give them list of Person names
+	    - Make a second array when called that contains all UNIQUE names in the first array
+	    - Run the second array to list everyone 
+	- If they input R & a Person Name, list all their friends, and their weights
+	    - for_loop to find them, and then print all other related in struct + weight 
+	- If they input Q, return 0
+    - refuse any improper input (both key and name)
+
+- Profit(?) 
+
+    [[28/8]]
+Made a plan, hope it works.
+I'll update the "-" on the TODO with a + as they are completed
+(* means abandoned)
+
+    [[29/8]]
+The file reading works, the data is in the stack stack. 
+Inputing data to the structs was a pain to get working, but it's done.
+We were given 2 weeks to do this, but it's only the second day and I'm almost done... 
+...Is the .json interpreter that much harder?
+
+EoD update, the thrones[kings] never updates position in the array, something fucked up.
+
+    [[30/8]]
+After spending most of last night trying to find where kings wasn't working, 
+I gave up, and started anew.
+-*-
+After helping Julius, I found that there was an even more convenient way to 
+organise all my information, and so abandoned all my previous work to adopt it.
+-*-
+A small error in the order of two operations led me to almost restart the project. Again.
+Thank god I spotted it.
+Fyi: if you're gonna read from an array, make sure you're reading the
+right position, and not the next one over.
+Also, if you want to copy a char[] to another, 
+make sure you're copying the content, and not the pointers.
+I've only got the relations input left to do. Everything else works as it should.
+
+    [[4/9]]
+The Rest of the program already worked, so I finished by making the "list friends" thing in about
+10min. I had a bit of extra time, so I decided to use strcmp() to bubble sort the array I use in
+"list people", finishing all the requirements for the assignment.
+I finished up the last bits with a surprising lack or errors. I was expecting one last "fuck you",
+but it never arrived.
